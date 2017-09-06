@@ -22,30 +22,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monto:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36y-aK-o9t">
-                                <rect key="frame" x="152" y="289" width="70" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monto:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36y-aK-o9t">
+                                <rect key="frame" x="160" y="289" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el monto " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ae-uu-uKf" customClass="TextFieldValidator">
-                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                        <color key="value" red="0.17810124158859253" green="0.2287430465221405" blue="0.44754743576049805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="presentInView" destination="8bC-Xf-vdC" id="Q4q-eg-GRE"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el monto " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="en3-os-mbH" customClass="TextFieldValidator">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el monto " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="en3-os-mbH" customClass="TextFieldValidator">
                                 <rect key="frame" x="16" y="318" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UYp-wf-kJx"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -86,14 +73,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99730914831161499" green="0.92169219255447388" blue="0.44733840227127075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5ae-uu-uKf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0P9-7P-E2c"/>
                             <constraint firstItem="juq-AK-A3V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FZE-JE-o3p"/>
+                            <constraint firstItem="en3-os-mbH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HrE-9D-ja0"/>
                             <constraint firstItem="eHG-F1-EvD" firstAttribute="centerY" secondItem="juq-AK-A3V" secondAttribute="centerY" id="JZG-hs-lma"/>
-                            <constraint firstItem="5ae-uu-uKf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V4I-gP-p6P"/>
+                            <constraint firstItem="en3-os-mbH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NIx-h3-2YG"/>
+                            <constraint firstItem="en3-os-mbH" firstAttribute="top" secondItem="36y-aK-o9t" secondAttribute="bottom" constant="8" id="PI5-G7-uae"/>
+                            <constraint firstItem="en3-os-mbH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Qxv-3J-hBL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="juq-AK-A3V" secondAttribute="bottom" constant="20" id="X6t-fo-xYM"/>
-                            <constraint firstItem="5ae-uu-uKf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v4X-6g-Quq"/>
+                            <constraint firstItem="en3-os-mbH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c43-y9-85a"/>
+                            <constraint firstItem="36y-aK-o9t" firstAttribute="centerX" secondItem="en3-os-mbH" secondAttribute="centerX" id="dck-qm-YmR"/>
                             <constraint firstItem="eHG-F1-EvD" firstAttribute="centerX" secondItem="juq-AK-A3V" secondAttribute="centerX" id="wsx-AY-6sU"/>
-                            <constraint firstItem="5ae-uu-uKf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xWu-YT-GCh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Monto" id="QTL-21-LR7"/>
